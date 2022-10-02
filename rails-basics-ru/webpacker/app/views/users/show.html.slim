@@ -1,0 +1,26 @@
+= content_for :title do
+  = @user.name
+
+p
+  = @user.email
+
+- if @tasks.any?
+  h4 Tasks:
+
+  table.table.table-striped.table-hover.mb-5
+    thead
+      tr
+        th{ scope: :col } #
+        th{ scope: :col } Name
+
+    tbody
+      - @tasks.each_with_index do |task, i|
+        tr
+          th{ scope: :col } = i + 1
+          td = link_to task.name, task
+
+hr
+
+.d-flex
+  = link_to 'Edit', edit_user_path(@user), class: 'btn btn-outline-primary me-2'
+  = link_to 'Back', :back, class: 'btn btn-outline-primary'

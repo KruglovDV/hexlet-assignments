@@ -1,0 +1,5 @@
+p = link_to "Create", new_post_path
+- @posts.each do |post|
+  div
+    div = link_to post.title, post_path(post)
+    div = post.summary

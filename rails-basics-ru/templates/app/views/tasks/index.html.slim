@@ -1,0 +1,5 @@
+p=link_to 'create task', new_task_path
+
+- @tasks.each do |task|
+  p=link_to task.name, task_path(task)
+  hr

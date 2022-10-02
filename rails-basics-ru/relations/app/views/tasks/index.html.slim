@@ -1,0 +1,9 @@
+= link_to 'create task', new_task_path
+hr
+- @tasks.each do |task|
+  h4= task.name
+  p = task.description
+  div
+    i = "user: #{task.user.name}, status: #{task.status.name} "
+    = link_to 'Show', task_path(task)
+  hr

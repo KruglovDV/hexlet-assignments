@@ -1,0 +1,23 @@
+= content_for :title do
+  = 'Tasks'
+
+= link_to 'New Task', new_task_path, class: 'btn btn-primary'
+
+table.table.table-striped.table-hover.mb-5
+  thead
+    tr
+      th{ scope: :col } #
+      th{ scope: :col } Name
+      th{ scope: :col } Assigned to
+      th
+
+  tbody
+    - @tasks.each_with_index do |task, i|
+      tr
+        th{ scope: :col } = i + 1
+        td = task.name
+        td = task.assigned_to.name
+        td.d-flex
+          .me-4 = link_to 'Show', task
+          .me-4 = link_to 'Edit', edit_task_path(task)
+          = link_to 'Destroy', task, data: { confirm: 'Are you sure?' }, method: :delete

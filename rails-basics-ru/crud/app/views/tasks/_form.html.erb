@@ -1,0 +1,59 @@
+<%= form_with model: task do |form| %>
+  <div>
+    <div>
+      <%= form.label :name %>
+    </div>
+    <%= form.text_field :name %>
+    <% task.errors.full_messages_for(:name).each do |error_message| %>
+      <%= error_message %>
+    <% end %>
+  </div>
+  <div>
+    <div>
+      <%= form.label :description %>
+    </div>
+    <%= form.text_field :description %>
+    <% task.errors.full_messages_for(:description).each do |error_message| %>
+      <%= error_message %>
+    <% end %>
+  </div>
+  <div>
+    <div>
+      <%= form.label :status %>
+    </div>
+    <%= form.text_field :status %>
+    <% task.errors.full_messages_for(:status).each do |error_message| %>
+      <%= error_message %>
+    <% end %>
+  </div>
+  <div>
+    <div>
+      <%= form.label :creator %>
+    </div>
+    <%= form.text_field :creator %>
+    <% task.errors.full_messages_for(:creator).each do |error_message| %>
+      <%= error_message %>
+    <% end %>
+  </div>
+  <div>
+    <div>
+      <%= form.label :performer %>
+    </div>
+    <%= form.text_field :performer %>
+    <% task.errors.full_messages_for(:performer).each do |error_message| %>
+      <%= error_message %>
+    <% end %>
+  </div>
+  <div>
+    <div>
+      <%= form.label :completed %>
+    </div>
+    <%= form.label :completed, "Yes", value: true  %>
+    <%= form.radio_button :completed, true %>
+    <%= form.label :completed, "No", value: false %>
+    <%= form.radio_button :completed, false %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,35 @@
+=form_with model: task do |form|
+  div
+    div=form.label :name
+    =form.text_field :name
+    -task.errors.full_messages_for(:name).each do |error_message|
+      =error_message
+  div
+    div= form.label :description
+    =form.text_field :description
+    -task.errors.full_messages_for(:description).each do |error_message|
+      = error_message
+  div
+    div= form.label :status
+    =form.text_field :status
+    -task.errors.full_messages_for(:status).each do |error_message|
+      = error_message
+  div
+    div= form.label :creator
+    =form.text_field :creator
+    -task.errors.full_messages_for(:creator).each do |error_message|
+      = error_message
+  div
+    div= form.label :performer
+    =form.text_field :performer
+    -task.errors.full_messages_for(:performer).each do |error_message|
+      =error_message
+  div
+    div= form.label :performer
+    =form.label :completed, "Yes", value: true
+    =form.radio_button :completed, true
+    =form.label :completed, "No", value: false
+    =form.radio_button :completed, false
+    -task.errors.full_messages_for(:completed).each do |error_message|
+      = error_message
+  div=form.submit

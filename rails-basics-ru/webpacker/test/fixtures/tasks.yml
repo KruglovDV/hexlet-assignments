@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: First task
+  description: Some description
+  assigned_to: one
+
+two:
+  name: Second task
+  description: Another description
+  assigned_to: two

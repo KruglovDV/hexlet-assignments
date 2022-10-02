@@ -1,0 +1,16 @@
+one:
+  name: 'Task 1'
+  description: 'Task 1 description'
+  status: 'new'
+  creator: 'Alice'
+  performer: 'John'
+  completed: false
+
+two:
+  name: 'Task 2'
+  description: 'Task 2 description'
+  status: 'new'
+  creator: 'Alice'
+  performer: 'John'
+  completed: false
+

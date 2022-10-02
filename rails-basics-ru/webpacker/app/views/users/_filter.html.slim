@@ -1,0 +1,12 @@
+.p-3.mb-3.bg-light
+  = simple_form_for @search,
+    method: 'get',
+    wrapper: :filter_form,
+    html: { class: 'd-flex form-row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4' },
+    url: url_for,
+    defaults: { required: false } do |f|
+    = f.input :name_cont, placeholder: 'Name'
+    = f.input :email_cont, placeholder: 'Email'
+    .col-auto.my-1.d-flex
+      = f.button :submit, 'Search', class: 'btn-primary flex-grow-1 me-2'
+      = link_to 'Reset', url_for, class: 'btn btn-outline-primary'

@@ -1,0 +1,4 @@
+<h1><%= @task.name %></h1>
+<p><%= @task.description %></p>
+<span>creator: <%= @task.creator %>, performer: <%= @task.performer || '-' %>, status: <%= @task.status %></span><br>
+<%= link_to 'Edit', edit_task_path(@task) %> | <%= link_to 'Destroy', task_path(@task), method: :delete, data: { confirm: "Really?" } %>

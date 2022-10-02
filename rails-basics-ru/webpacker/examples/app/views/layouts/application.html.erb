@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WebpackerApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%# stylesheet_link_tag - хелпер Sprockets, для webpacker используется другой хелпер %>
+    <%# stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%# stylesheet_pack_tag - хелпер Webpacker для стилей %>
+    <%#= stylesheet_pack_tag 'application' %>
+    <%= javascript_pack_tag 'application' %>
+    <%# Если файл должен подключаться отдельно, то он должен находиться внутри  директории packs %>
+    <%= javascript_pack_tag 'hello2' %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

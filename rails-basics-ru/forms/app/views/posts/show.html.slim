@@ -1,0 +1,6 @@
+h1 = @post.title
+p = @post.body
+
+= link_to 'Edit', edit_post_path(@post)
+span  |
+= link_to 'Destroy', post_path(@post), method: :delete
